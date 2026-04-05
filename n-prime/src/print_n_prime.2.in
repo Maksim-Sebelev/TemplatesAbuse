@@ -1,0 +1,14 @@
+;
+    std::cout << templates_abuse::n_prime<n> << std::endl;
+    return 0;
+}
+catch (std::exception const & e)
+{
+    std::cerr << "print-n-prime: error: " << e.what() << "\n";
+    return 1;
+}
+catch (...)
+{
+    std::cerr << "print-n-prime: error: something unknown. please submit a bug report.\n"
+    return 1;
+}

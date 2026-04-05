@@ -1,0 +1,6 @@
+#!/bin/bash
+
+print_n_prime="@TEMPLATES_ABUSE_N_PRIME_RUN@"
+
+bash "$print_n_prime" "$1"
+exit $?

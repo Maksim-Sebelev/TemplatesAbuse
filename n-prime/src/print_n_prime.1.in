@@ -1,0 +1,8 @@
+#include <iostream>
+#include <stdexcept>
+#include "n-prime.hpp"
+
+int main() try
+{
+    constexpr templates_abuse::natural_number_t n = 
+    
