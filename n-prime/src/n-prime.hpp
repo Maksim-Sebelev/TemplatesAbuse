@@ -19,19 +19,19 @@ namespace __detail
 template <natural_number_t N, natural_number_t H = 2>
 struct is_prime :
     public std::bool_constant
+        <
+            std::conditional_t
             <
+                (H * H > N),
+                std::true_type,
                 std::conditional_t
                 <
-                    (H * H > N),
-                    std::true_type,
-                    std::conditional_t
-                    <
-                        (N % H == 0),
-                        std::false_type,
-                        is_prime<N, H + 2>
-                    >
-                >{}
-            >
+                    (N % H == 0),
+                    std::false_type,
+                    is_prime<N, H + 2>
+               >
+            >{}
+        >
 {};
 
 //--------------------------------------------------------------------------------------------------------
@@ -39,14 +39,14 @@ struct is_prime :
 template <natural_number_t N>
 struct is_prime<N, 2> :
     public std::bool_constant
+        <
+            std::conditional_t
             <
-                std::conditional_t
-                <
-                    (N % 2 == 0),
-                    std::false_type,
-                    is_prime<N, 3>
-                >{}
-            >
+                (N % 2 == 0),
+                std::false_type,
+                is_prime<N, 3>
+            >{}
+        >
 {};
 
 
@@ -59,11 +59,6 @@ struct is_prime<0> : public std::false_type {};
 
 template <>
 struct is_prime<1> : public std::false_type {};
-
-//--------------------------------------------------------------------------------------------------------
-
-template <>
-struct is_prime<2> : public std::true_type {};
 
 //--------------------------------------------------------------------------------------------------------
 

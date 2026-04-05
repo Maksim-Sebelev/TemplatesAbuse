@@ -46,7 +46,6 @@ file(CHMOD ${TEMPLATES_ABUSE_N_PRIME_RUN}     PERMISSIONS OWNER_READ OWNER_WRITE
 # =================================================================================================
 
 function(add_n_prime_test n_prime expected_value)
-  message("КАКИЕ НАХУЙ ГОСУСЛУГИ")
   add_test(
     NAME template-abuse::n-prime::${n_prime}
     COMMAND bash -c "${TEMPLATES_ABUSE_N_PRIME_RUN_OUT} ${n_prime} | grep -q ${expected_value}"
