@@ -29,7 +29,7 @@ The first joke, is calculating n-th prime number on c++ templates.
 This is the bash script, which generates C++ program, compiles it and executes.
 
 If number is too big, probably compilation will failed with recursive "template instantiation exceeded maximum depth of 1024".
-So this program can`t calculate prime number with number greater then 166.
+So this program can`t calculate prime number with number greater then 300.
 
 ## Tests
 

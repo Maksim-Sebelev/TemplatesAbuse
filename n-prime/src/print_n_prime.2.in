@@ -1,4 +1,5 @@
-> << std::endl;
+;
+    std::cout << templates_abuse::n_prime<n> << std::endl;
     return 0;
 }
 catch (std::exception const & e)
