@@ -4,5 +4,4 @@
 
 int main() try
 {
-    constexpr templates_abuse::natural_number_t n = 
-    
+    std::cout << templates_abuse::n_prime<
